@@ -27,32 +27,34 @@ img{
 }
 .container{
     max-width: 1200px;
-    height: 100%;
+    /*width: 100%;*/
+    height: auto;
     margin: 0 auto;
     padding: 0 10px;
 }
-.section-header{
+.header__intro{
     text-align: center;
     max-width: 450px;
     margin: 0 auto 50px;
 }
-.section-header.pricing{
+.header__intro.pricing{
     color: white;
 }
-.header-nav{
+.header__nav{
     max-width: 1440px;
+    margin: 0 auto;
     display: grid;
     align-items: center;
     padding: 60px 20px;
 }
 @media (min-width: 768px) {
-    .header-nav{
+    .header__nav{
         display: grid;
         grid-template-columns: 1fr 200px 1fr;
         gap: 30px;
     }
 }
-.header-nav a{
+.header__nav a{
     color: white;
     text-decoration: none;
     padding-left: 30px;
@@ -69,14 +71,14 @@ img{
         justify-self: end;
     }
 }
-.header-content{
+.header__content{
     max-width: 700px;
     width: 100%;
     height: auto;
     margin: 100px auto 0;
     padding-bottom: 200px;
 }
-#subtitle{
+#header__subtitle{
     font-size: 28px;
     text-align: center;
     margin-bottom: 60px;
@@ -102,23 +104,23 @@ img{
     max-width: 500px;
     margin: 0 auto;
 }
-.features-col{
+.features__container{
     margin-top: 80px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 50px;
 }
-.features-item{
+.features__item{
     max-width: 220px;
 }
-.features-item h3{
+.features__item h3{
     font-style: 20px;
 }
-.fuatures-video{
+.features__video{
     position: relative;
 }
-.play-button{
+.video__button{
     position: absolute;
     top: 50%;
     transform: translateX(-50%);
@@ -126,7 +128,7 @@ img{
     transform: translateY(-50%);
     left: 40%;
 }
-.way-grid{
+.way__container{
     margin-top: 170px;
     display: flex;
     flex-wrap: wrap;
@@ -139,37 +141,37 @@ img{
     padding: 16px 62px;
     margin-top: 50px;
 }
-.way-grid img{
+.way__container img{
     max-width: 625px;
     width: 100%;
     height: auto;
 }
-.way-text{
+.way__content{
     max-width: 450px;
 }
-.subscribe-grid{
+.subscribe__container{
     margin-top: 170px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 100px;
 }
-.subscribe-grid img{
+.subscribe__container img{
     max-width: 670px;
     width: 100%;
     height: auto;
 }
-.subscribe-text{
+.subscribe__content{
     max-width: 350px;
 }
-.subscribe-text p{
+.subscribe__content p{
     font-weight: bold;
 }
-.form-title{
+.subscribe__form-title{
     font-weight: bold;
     margin: 0;
 }
-p.form-subtitle{
+p.subscribe__form-subtitle{
     margin: 0 0 30px;
     font-weight: 300;
 }
@@ -179,10 +181,11 @@ p.form-subtitle{
     border: transparent;
     border-radius: 35px;
 }
-button{    
+#submit{    
+    max-width: 90px;
     background-color: #2091F9;
-    font-size: 20px;
-    padding: 14px 25px;
+    font-size: 16px;
+    padding: 14px 18px;
     text-align: center;
     color: white;
     text-decoration: none;
@@ -193,21 +196,21 @@ button{
 #partners{
     margin: 100px 0;
 }
-.partner-grid{
+.partner__container{
     text-align: center;
 }
-.partner-grid p{
+.partner__container p{
     max-width: 400px;
     margin: 0 auto 50px;
 }
-.partners-group{
+.partners__group{
     /*display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;*/
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-.partner-item{
+.partner__item{
     border: 1px solid #D8D8D8;
     text-align: center;
     padding: 10px 30px;
@@ -234,26 +237,26 @@ button{
     width: 50px;
     height: 50px;
 }
-.person-info{
+.person__info{
     text-align: left;
 }
-.person-info h3{
+.person__info h3{
     font-style: 16px;
     font-weight: 400;
     margin: 0;
 }
-.person-info p{
+.person__info p{
     font-style: 15px;
     margin: 0;
 }
-.cards-grid{
+.cards__container{
     display: flex;
     gap: 50px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
-.card-item{
+.card__item{
     background-color: white;
     border-radius: 10px;
     border: 1px solid #DEDEDE;
@@ -261,7 +264,7 @@ button{
     padding: 40px;
     text-align: center;
 }
-.card-item.standart{
+.card__item.standart{
     padding: 60px 40px;
     background-color: #2091F9;
     color: white;
@@ -275,13 +278,13 @@ button{
     padding: 50px 0 100px;
     background-color: #252B42;
 }
-.cards-grid li{
+.cards__container li{
     list-style: none;
     margin-left: -20px;
     padding: 10px 0;
     font-size: 15px;
 }
-.cards-grid h5{
+.cards__container h4{
     max-width: 160px;
     margin: 0 auto;
     font-weight: 400;
@@ -303,50 +306,52 @@ button{
 #contact{
     margin: 100px 0;
 }
-.contact-details{
+.contact__details{
     text-align: center;
 }
-.contact-grid{
+.contact__container{
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
     justify-content: center;
     align-items: center;
 }
-.contact-form{
+.contact__form{
     border-radius: 35px;
     border: 1px solid #dddd;
     max-width: 320px;
     padding: 30px;
 }
-.contact-form input{
-    padding: 19px 130px 19px 20px;
+.contact__form input{
+    padding: 19px 0 19px 20px;
     margin-bottom: 25px;
     border-radius: 40px;
     background-color: #F5F5F5;
     border: none;
+    width: 90%;
 }
-.contact-form textarea{
+.contact__form textarea{
     background-color: #F5F5F5;
     border: none;
-    max-width: 300px;
+    width: 90%;
     height: 200px;
     padding: 19px 0 19px 20px;
     margin-bottom: 45px;
 }
-.contact-form ::placeholder{
+.contact__form ::placeholder{
     color: black;
 }
 .socials.contact{
     margin-top: 30px;
 }
-.details-grid{
+.details__container{
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
 }
-.details-item{
+.details__item{
     max-width: 280px;
     text-align: center;
 }
@@ -363,20 +368,20 @@ iframe{
     font-size: 15px;
     padding: 10px 0;
 }
-.footer-grid{
+.footer__container{
     max-width: 1000px;
     margin: 0 auto;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
-.footer-pages, .footer-tomothy, .footer-black{
+.footer__pages, .footer__tomothy, .footer__black{
     color: white;
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
-.footer-map, .footer-phone{
+.footer__map, .footer__phone{
     display: flex;
     flex-wrap: wrap;
     color: white;
