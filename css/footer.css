@@ -1,6 +1,7 @@
 #footer {
     background-color: #252B42;
     padding: 50px 0;
+    margin-bottom: -100px;
 }
 
 #footer a {
@@ -35,6 +36,7 @@
     color: white;
     align-items: center;
     gap: 10px;
+    font-size: 15px;
 }
 
 .footer__socials {
