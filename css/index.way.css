@@ -84,6 +84,11 @@ p.subscribe__form-subtitle {
     margin-top: 10px;
 }
 
+#submit:hover{
+    background-color: rgb(11, 18, 77);
+    cursor: pointer;
+}
+
 @media (min-width: 425px) {
     .form {
         display: flex;

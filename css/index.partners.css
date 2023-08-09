@@ -28,7 +28,7 @@
 
 @media (min-width: 600px) {
     .partner__item {
-        border: 1px solid #D8D8D8;
+        border: 1px solid rgba(11, 18, 77, 0.401);
     }
 
     .partners__group {
